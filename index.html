@@ -5,25 +5,26 @@
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-    <title>RISE-Multipurpose Html Template</title>
+    <title>{{ this.theme.site_name }} - {{ this.page.title }}</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta name="title" content="{% if this.page.meta_title %}{{ this.page.meta_title }}{% else %}{{ this.theme.meta_title }}{% endif %}">
+    <meta name="keywords" content="{{ this.theme.meta_keywords }}">
+    <meta name="description" content="{% if this.page.meta_description %}{{ this.page.meta_description }}{% else %}{{ this.theme.meta_description }}{% endif %}">
+    <meta name="author" content="Artifex Team">
 
     <!-- Bootstrap Css -->
-    <link href="bootstrap-assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{'assets/bootstrap-assets/css/bootstrap.min.css'|theme}}" rel="stylesheet">
 
     <!-- Style -->
-    <link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
-    <link href="plugins/owl-carousel/owl.theme.css" rel="stylesheet">
-    <link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
-    <link href="plugins/Lightbox/dist/css/lightbox.css" rel="stylesheet">
-    <link href="plugins/Icons/et-line-font/style.css" rel="stylesheet">
-    <link href="plugins/animate.css/animate.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="{{'assets/plugins/owl-carousel/owl.carousel.css'|theme}}" rel="stylesheet">
+    <link href="{{'assets/plugins/owl-carousel/owl.theme.css'|theme}}" rel="stylesheet">
+    <link href="{{'assets/plugins/owl-carousel/owl.transitions.css'|theme}}" rel="stylesheet">
+    <link href="{{'assets/plugins/Lightbox/dist/css/lightbox.css'|theme}}" rel="stylesheet">
+    <link href="{{'assets/plugins/Icons/et-line-font/style.css'|theme}}" rel="stylesheet">
+    <link href="{{'assets/plugins/animate.css/animate.css'|theme}}" rel="stylesheet">
+    <link href="{{'assets/css/main.css'|theme}}" rel="stylesheet">
     <!-- Icons Font -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -51,7 +52,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="img/logo/logo.png" class="img-responsive" alt="logo"></a>
+                    <a class="navbar-brand" href="#"><img src="{{'assets/img/logo/logo.png'|theme}}" class="img-responsive" alt="logo"></a>
                 </div>
                 <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
                     <div class="col-md-8 col-xs-12 nav-wrap">
@@ -74,21 +75,21 @@
             </div>
         </nav>
         <div id="owl-hero" class="owl-carousel owl-theme">
-            <div class="item" style="background-image: url(img/sliders/Slide.jpg)">
+            <div class="item" style="background-image: url({{'assets/img/sliders/Slide.jpg'|theme}})">
                 <div class="caption">
                     <h6>Branding / Design / Creativty</h6>
-                    <h1>We Are <span>Rise</span></h1>
+                    <h1>We Are <span>Artifex Team</span></h1>
                     <a class="btn btn-transparent" href="#">Learn More</a><a class="btn btn-light" href="#">Buy Now</a>
                 </div>
             </div>
-            <div class="item" style="background-image: url(img/sliders/Slide2.jpg)">
+            <div class="item" style="background-image: url({{'assets/img/sliders/Slide2.jpg'|theme}})">
                 <div class="caption">
                     <h6>Branding / Design / Creativty</h6>
                     <h1>Creative <span>Design</span></h1>
                     <a class="btn btn-transparent" href="#">Learn More</a><a class="btn btn-light" href="#">Buy Now</a>
                 </div>
             </div>
-            <div class="item" style="background-image: url(img/sliders/Slide3.jpg)">
+            <div class="item" style="background-image: url({{'assets/img/sliders/Slide3.jpg'|theme}})">
                 <div class="caption">
                     <h6>Branding / Design / Creativty</h6>
                     <h1>Clean <span>Code</span></h1>
@@ -102,10 +103,10 @@
 	============================================= -->
     <section id="welcome">
         <div class="container">
-            <h2>Welcome To <span>Rise</span></h2>
+            <h2>Welcome To <span>Artifex Team</span></h2>
             <hr class="sep">
             <p>Make Yourself At Home Don't Be Shy</p>
-            <img class="img-responsive center-block wow fadeInUp" data-wow-delay=".3s" src="img/welcome/logo.png" alt="logo">
+            <img class="img-responsive center-block wow fadeInUp" data-wow-delay=".3s" src="{{'assets/img/welcome/logo.png'|theme}}" alt="logo">
         </div>
     </section>
 
@@ -182,8 +183,8 @@
             <p>Showcase Your Amazing Work With Us</p>
             <div class="row">
                 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
-                    <a class="portfolio-box" href="img/portfolio/1.jpg" data-lightbox="image-1" data-title="Your caption">
-                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="1">
+                    <a class="portfolio-box" href="{{'assets/img/portfolio/1.jpg'|theme}}" data-lightbox="image-1" data-title="Your caption">
+                        <img src="{{'assets/img/portfolio/1.jpg'|theme}}" class="img-responsive" alt="1">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -197,8 +198,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
-                    <a href="img/portfolio/2.jpg" class="portfolio-box" data-lightbox="image-2" data-title="Your caption">
-                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="2">
+                    <a href="{{'assets/img/portfolio/2.jpg'|theme}}" class="portfolio-box" data-lightbox="image-2" data-title="Your caption">
+                        <img src="{{'assets/img/portfolio/2.jpg'|theme}}" class="img-responsive" alt="2">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -212,8 +213,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
-                    <a href="img/portfolio/3.jpg" class="portfolio-box" data-lightbox="image-3" data-title="Your caption">
-                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="3">
+                    <a href="{{'assets/img/portfolio/3.jpg'|theme}}" class="portfolio-box" data-lightbox="image-3" data-title="Your caption">
+                        <img src="{{'assets/img/portfolio/3.jpg'|theme}}" class="img-responsive" alt="3">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -227,8 +228,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
-                    <a href="img/portfolio/4.jpg" class="portfolio-box" data-lightbox="image-4" data-title="Your caption">
-                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="4">
+                    <a href="{{'assets/img/portfolio/4.jpg'|theme}}" class="portfolio-box" data-lightbox="image-4" data-title="Your caption">
+                        <img src="{{'assets/img/portfolio/4.jpg'|theme}}" class="img-responsive" alt="4">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -242,8 +243,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
-                    <a href="img/portfolio/5.jpg" class="portfolio-box" data-lightbox="image-5" data-title="Your caption">
-                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="5">
+                    <a href="{{'assets/img/portfolio/5.jpg'|theme}}" class="portfolio-box" data-lightbox="image-5" data-title="Your caption">
+                        <img src="{{'assets/img/portfolio/5.jpg'|theme}}" class="img-responsive" alt="5">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -257,8 +258,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
-                    <a href="img/portfolio/6.jpg" class="portfolio-box" data-lightbox="image-6" data-title="Your caption">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="6">
+                    <a href="{{'assets/img/portfolio/6.jpg'|theme}}" class="portfolio-box" data-lightbox="image-6" data-title="Your caption">
+                        <img src="{{'assets/img/portfolio/6.jpg'|theme}}" class="img-responsive" alt="6">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -342,9 +343,9 @@
             <div class="row wow fadeInUp" data-wow-delay=".3s">
                 <div class="col-md-4">
                     <div class="team">
-                        <img class="img-responsive center-block" src="img/team/MariaDoe.jpg" alt="1">
-                        <h4>Maria Doe</h4>
-                        <p>Designer</p>
+                        <img class="img-responsive center-block" src="{{'assets/img/team/JasonDoe.jpg'|theme}}" alt="1">
+                        <h4>Jomar Matos</h4>
+                        <p>Project Manager</p>
                         <div class="team-social-icons">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -354,9 +355,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="team">
-                        <img class="img-responsive center-block" src="img/team/JasonDoe.jpg" alt="2">
-                        <h4>Jason Doe</h4>
-                        <p>Developer</p>
+                        <img class="img-responsive center-block" src="{{'assets/img/team/JasonDoe.jpg'|theme}}" alt="2">
+                        <h4>Miguelangel Cabrera</h4>
+                        <p>Frontend Developer</p>
                         <div class="team-social-icons">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -366,9 +367,9 @@
                 </div>
                 <div class="col-md-4">
                     <div class="team">
-                        <img class="img-responsive center-block" src="img/team/MikeDoe.jpg" alt="3">
-                        <h4>Mike Doe</h4>
-                        <p>Photographer</p>
+                        <img class="img-responsive center-block" src="{{'assets/img/team/MikeDoe.jpg'|theme}}" alt="3">
+                        <h4>Luis Diaz</h4>
+                        <p>Backend Developer</p>
                         <div class="team-social-icons">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -390,27 +391,27 @@
                 <div class="item">
                     <div class="quote">
                         <i class="fa fa-quote-left left fa-2x"></i>
-                        <h5>I’am amazed, I should say thank you so much for your awesome template. Design is so 
-good and neat, every detail has been taken care these team are realy amazing and talented! I will 
-work only with <span>Rise</span>.<i class="fa fa-quote-right right fa-2x"></i></h5>
+                        <h5>I’am amazed, I should say thank you so much for your awesome template. Design is so
+good and neat, every detail has been taken care these team are realy amazing and talented! I will
+work only with <span>Artifex Team</span>.<i class="fa fa-quote-right right fa-2x"></i></h5>
 
                     </div>
                 </div>
                 <div class="item">
                     <div class="quote">
                         <i class="fa fa-quote-left left fa-2x"></i>
-                        <h5>I’am amazed, I should say thank you so much for your awesome template. Design is so 
-good and neat, every detail has been taken care these team are realy amazing and talented! I will 
-work only with <span>Rise</span>.<i class="fa fa-quote-right right fa-2x"></i></h5>
+                        <h5>I’am amazed, I should say thank you so much for your awesome template. Design is so
+good and neat, every detail has been taken care these team are realy amazing and talented! I will
+work only with <span>Artifex Team</span>.<i class="fa fa-quote-right right fa-2x"></i></h5>
 
                     </div>
                 </div>
                 <div class="item">
                     <div class="quote">
                         <i class="fa fa-quote-left left fa-2x"></i>
-                        <h5>I’am amazed, I should say thank you so much for your awesome template. Design is so 
-good and neat, every detail has been taken care these team are realy amazing and talented! I will 
-work only with <span>Rise</span>.<i class="fa fa-quote-right right fa-2x"></i></h5>
+                        <h5>I’am amazed, I should say thank you so much for your awesome template. Design is so
+good and neat, every detail has been taken care these team are realy amazing and talented! I will
+work only with <span>Artifex Team</span>.<i class="fa fa-quote-right right fa-2x"></i></h5>
 
                     </div>
                 </div>
@@ -443,34 +444,41 @@ work only with <span>Rise</span>.<i class="fa fa-quote-right right fa-2x"></i></
     <!-- Google Map
 	============================================= -->
     <div id="map"></div>
+    
+    {% partial 'header' %}
+
+    {% page %}
+
+    {% partial 'footer' %}
     <!-- Footer
 	============================================= -->
     <footer>
         <div class="container">
-            <h1>Rise</h1>
+            <h1>Artifex Team</h1>
             <div class="social">
                 <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
                 <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
                 <a href="#"><i class="fa fa-dribbble fa-2x"></i></a>
             </div>
-            <h6>&copy; 2015 Rise.Development By BootstrapDev</h6>
+            <h6>&copy; 2015 Artifex Team.Development By BootstrapDev</h6>
         </div>
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap-assets/js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{'assets/bootstrap-assets/js/bootstrap.min.js'|theme}}"></script>
+    <script src="{{'assets/js/custom.js'|theme}}"></script>
     <!-- JS PLUGINS -->
-    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="plugins/waypoints/jquery.waypoints.min.js"></script>
-    <script src="plugins/countTo/jquery.countTo.js"></script>
-    <script src="plugins/inview/jquery.inview.min.js"></script>
-    <script src="plugins/Lightbox/dist/js/lightbox.min.js"></script>
-    <script src="plugins/WOW/dist/wow.min.js"></script>
+    <script src="{{'assets/plugins/owl-carousel/owl.carousel.min.js'|theme}}"></script>
+    <script src="{{'assets/js/jquery.easing.min.js'|theme}}"></script>
+    <script src="{{'assets/plugins/waypoints/jquery.waypoints.min.js'|theme}}"></script>
+    <script src="{{'assets/plugins/countTo/jquery.countTo.js'|theme}}"></script>
+    <script src="{{'assets/plugins/inview/jquery.inview.min.js'|theme}}"></script>
+    <script src="{{'assets/plugins/Lightbox/dist/js/lightbox.min.js'|theme}}"></script>
+    <script src="{{'assets/plugins/WOW/dist/wow.min.js'|theme}}"></script>
     <!-- GOOGLE MAP -->
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0X0bIbN8rtjPnYXPsHFd9ZQK0dMBMK0I"
+type="text/javascript"></script>
 </body>
 
 </html>
